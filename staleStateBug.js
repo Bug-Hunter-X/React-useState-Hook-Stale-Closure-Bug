@@ -1,0 +1,1 @@
+This bug is related to the usage of the `useState` hook in React.  The problem occurs when you have a nested function that tries to update the state using `setSomeState`. The inner function, while it has access to `setSomeState` via closure, may update the state with a stale closure value if the function isn't called immediately and another state update occurs before it.
